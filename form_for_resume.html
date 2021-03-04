@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function passvalue(){
+            var name = document.getElementById("name").value;
+            localStorage.setItem("namevalue", name);
+            var mobileno = document.getElementById("mobile no.").value;
+            localStorage.setItem("mobilevalue", mobileno);
+            var email = document.getElementById("email").value;
+            localStorage.setItem("emailvalue", email);
+            var linkedin = document.getElementById("linkedin").value;
+            localStorage.setItem("linkvalue", linkedin );
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="resume.html">
+        <fieldset><legend>From</legend>
+        <table>
+            <tr><td>Name</td><td><input type="text" id="name"/></td></tr>
+            <tr><td>Mobile Number</td><td><input type="text" id="mobile no."/></td></tr>
+            <tr><td>Email</td><td><input type="text" id="email"/></td></tr>
+            <tr><td>Linkedin</td><td><input type="text" id="linkedin"/></td></tr> 
+            <tr><td></td><td><input type="submit" value="submit" onclick="passvalue();"/></td></tr>
+
+        </table>
+        </fieldset>
+    </form> 
+</body>
+</html>
